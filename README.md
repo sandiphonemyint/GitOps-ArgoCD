@@ -57,3 +57,12 @@ kubectl -n argocd get secret argocd-initial-admin-secret \
 URL: https://<EXTERNAL-IP> External IP from LoadBalancer 
 Username: admin
 Password: (from the command above)
+
+---
+
+## 🚀 Next Steps
+
+- 🔗 Connect your GitHub repo to Argo CD  
+- 🚀 Create your Argo CD app using CLI or UI  
+- 🔄 Push updates to GitHub and watch Argo CD auto-sync to GKE  
+- 🧠 Explore GitOps workflow via Argo CD dashboard

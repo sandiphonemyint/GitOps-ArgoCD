@@ -1,4 +1,4 @@
-# 🎮 Tetris Game Deployment with Argo CD on GKE (GitOps)
+# 🎮 GitOps Implementation with Argo CD and GKE
 
 ### 📘 Project Overview
 

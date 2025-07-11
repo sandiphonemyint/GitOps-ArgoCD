@@ -69,3 +69,7 @@ Password: (from the command above)
 - 🚀 Create your Argo CD app using CLI or UI  
 - 🔄 Push updates to GitHub and watch Argo CD auto-sync to GKE  
 - 🧠 Explore GitOps workflow via Argo CD dashboard
+
+## Accessing the Tetris Game
+
+After creating the Argo CD Application, the Tetris game is deployed to the cluster and exposed via a Kubernetes Service with an external IP or hostname. You can access the game through this address and play it directly in your browser.

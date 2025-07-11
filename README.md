@@ -36,28 +36,25 @@ export CLUSTER_NAME=$CLUSTER_NAME
 export ZONE=$ZONE 
 
 ✅ Set GCP project
-gcloud config set project $PROJECT_ID
+>> gcloud config set project $PROJECT_ID
 
-✅  Connect kubectl to the cluster
-gcloud container clusters get-credentials $CLUSTER_NAME \
-  --zone=$ZONE --project=$PROJECT_ID
+✅ Connect kubectl to the cluster
+>> gcloud container clusters get-credentials $CLUSTER_NAME --zone=$ZONE --project=$PROJECT_ID
 
 ✅ Create argocd namespace
-kubectl create namespace argocd
+>> kubectl create namespace argocd
 
 ✅ Install Argo CD
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+>> kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 ✅ Expose Argo CD via LoadBalancer
-kubectl patch svc argocd-server -n argocd \
-  -p '{"spec": {"type": "LoadBalancer"}}'
+>> kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 
 ✅ Get Argo CD external IP (wait until assigned)
-kubectl get svc argocd-server -n argocd
+>> kubectl get svc argocd-server -n argocd
 
 ✅ Get Argo CD admin password
-kubectl -n argocd get secret argocd-initial-admin-secret \
-  -o jsonpath="{.data.password}" | base64 -d; echo
+>> kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 
 ✅ Access Argo CD
 URL: https://<EXTERNAL-IP> External IP from LoadBalancer 

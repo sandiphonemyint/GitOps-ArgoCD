@@ -1,10 +1,16 @@
 # 🎮 Tetris Game Deployment with Argo CD on GKE (GitOps)
 
-Deploying a containerized **Tetris game** to **Google Kubernetes Engine (GKE)** using **Argo CD** and the **GitOps** approach.
+### 📘 Project Overview
+
+This project showcases how to deploy a containerized **Tetris game** to **Google Kubernetes Engine (GKE)** using **Argo CD** with the **GitOps** approach.
+
+GitOps is a modern deployment strategy where Git is the single source of truth, and changes to infrastructure or applications are automatically synced to Kubernetes clusters. With Argo CD, every update to the Git repository is continuously monitored and applied to the cluster, ensuring consistent, reliable, and auditable deployments.
+
+By completing this project, I’ve built a real-world GitOps workflow, demonstrating how modern DevOps teams manage cloud-native applications with automation, version control, and confidence.
 
 ---
 
-## 🚀 Tech Stack
+### 🚀 Tech Stack
 
 - GKE (Google Kubernetes Engine)
 - Argo CD
@@ -14,14 +20,14 @@ Deploying a containerized **Tetris game** to **Google Kubernetes Engine (GKE)** 
 
 ---
 
-## ⚙️ Setup Instructions
+### ⚙️ Setup Instructions
 
-### 1️⃣ Create a GKE Cluster (Standard mode)
+#### 1️⃣ Create a GKE Cluster (Standard mode)
 > Make sure the GKE cluster is running and ready.
 
 ---
 
-### 2️⃣ Connect to GKE and Install Argo CD
+#### 2️⃣ Connect to GKE and Install Argo CD
 
 ```bash
 ✅ Set project variables
